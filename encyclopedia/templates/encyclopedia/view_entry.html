@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+
+    {{ entry_data | safe }}
+
+    <hr>
+
+    <button class="btn-floating orange waves-effect waves-dark right">
+        <a href="{% url 'encyclopedia:edit-entry' title %}"><i class="material-icons">edit</i></a>
+    </button>
+{% endblock %}
